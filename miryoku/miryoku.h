@@ -13,8 +13,9 @@
 #define U_NA &none // present but not available for use
 #define U_NU &none // available but not used
 
-#define U_TAPPING_TERM 180
-#define U_QUICK_TAP_TERM 125
+#define U_TAPPING_TERM 120
+#define U_DOUBLE_TAPPING_TERM 200
+#define U_QUICK_TAP_TERM 95
 
 #include "miryoku_clipboard.h"
 

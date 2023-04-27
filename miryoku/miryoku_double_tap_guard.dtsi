@@ -8,7 +8,7 @@
       compatible = "zmk,behavior-tap-dance"; \
       label = U_STRINGIFY(NAME); \
       #binding-cells = <0>; \
-      tapping-term-ms = <U_TAPPING_TERM>; \
+      tapping-term-ms = <U_DOUBLE_TAPPING_TERM>; \
       bindings = <&none>, <BINDING>; \
     }; \
   }; \
