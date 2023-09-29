@@ -8,3 +8,5 @@
 &kp LSHIFT,        &kp A,             &kp S,             &kp D,             &kp F,             &kp M,             &kp N,             &kp E,             &kp I,             &kp O,             \
 &kp LCTRL,         &kp Z,             &kp X,             &kp C,             &kp V,             &kp K,             &kp H,             &kp COMMA,         &kp DOT,           &kp SLASH,         \
 U_NP,              U_NP,              &kp ESC,           &kp SPC,           &kp TAB,           &kp ESC,           &kp LS(TAB),       &kp DEL,           U_NP,              U_NP
+
+#define MIRYOKU_CLIPBOARD_WIN

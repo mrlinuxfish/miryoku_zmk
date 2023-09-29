@@ -1,0 +1,32 @@
+// Copyright 2023 mrlinuxfish
+// https://github.com/manna-harbour/miryoku
+
+#define CUSTOM_KLUDGE_VERTICALCOMBOS_TERM 200
+#define CUSTOM_KLUDGE_VERTICALCOMBOS_MACRO(LAYER, POSITION, BINDING) \
+verticalcombos_ ## LAYER ## _ ## POSITION { \
+  layers = <LAYER>; \
+  key-positions = <CUSTOM_KLUDGE_VERTICALCOMBOS_ ## POSITION>; \
+  bindings = <BINDING>; \
+  timeout-ms = <CUSTOM_KLUDGE_VERTICALCOMBOS_TERM>; \
+};
+
+/ {
+  combos {
+    compatible = "zmk,combos";
+#if defined (MIRYOKU_LAYERS_FLIP)
+  #if defined (CUSTOM_KLUDGE_VERTICALCOMBOS_LEFT)
+    CUSTOM_KLUDGE_VERTICALCOMBOS_MACRO(U_BASE, LEFT, &lt U_FUN DEL)
+  #endif
+  #if defined (CUSTOM_KLUDGE_VERTICALCOMBOS_RIGHT)
+    CUSTOM_KLUDGE_VERTICALCOMBOS_MACRO(U_BASE, RIGHT, &lt U_MEDIA ESC)
+  #endif
+#else
+  #if defined (CUSTOM_KLUDGE_VERTICALCOMBOS_LEFT)
+    CUSTOM_KLUDGE_VERTICALCOMBOS_MACRO(U_BASE, LEFT, &lt U_MEDIA ESC)
+  #endif
+  #if defined (CUSTOM_KLUDGE_VERTICALCOMBOS_RIGHT)
+    CUSTOM_KLUDGE_VERTICALCOMBOS_MACRO(U_BASE, RIGHT, &lt U_FUN DEL)
+  #endif
+#endif
+  };
+};
