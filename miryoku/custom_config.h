@@ -10,3 +10,5 @@
 U_NP,              U_NP,              &kp ESC,           &kp SPC,           &kp TAB,           &kp ESC,           &kp LS(TAB),       &kp DEL,           U_NP,              U_NP
 
 #define MIRYOKU_CLIPBOARD_WIN
+#define CUSTOM_KLUDGE_VERTICALCOMBOS_LEFT
+#define CUSTOM_KLUDGE_VERTICALCOMBOS_RIGHT
